@@ -2,7 +2,7 @@ package model;
 
 import java.util.Date;
 
-public class Usuario {
+public abstract class Usuario {
     private String nome;
     private String matricula;
     private Date dataDeNascimento;
@@ -56,5 +56,7 @@ public class Usuario {
     public void setNumero(String numero) {
         this.numero = numero;
     }
+
+    public abstract void menu();
 
 }
