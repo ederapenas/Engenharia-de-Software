@@ -5,6 +5,7 @@ import java.util.Date;
 public abstract class Usuario {
     private String nome;
     private String matricula;
+    private String senha;
     private Date dataDeNascimento;
     private String numero;
     private String email;
@@ -15,6 +16,7 @@ public abstract class Usuario {
         this.dataDeNascimento = dataDeNascimento;
         this.numero = numero;
         this.email = email;
+        this.senha = null;
     }
 
     public String getMatricula() {

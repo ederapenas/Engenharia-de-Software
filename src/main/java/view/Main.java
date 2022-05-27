@@ -31,51 +31,20 @@ public class Main {
                 case 1:
                     break;
                 case 2:
-                    System.out.println("Você deseja cadastrar um Aluno ou professor?");
-                    System.out.println("1 - Aluno");
-                    System.out.println("2 - Professor");
-                    int op = input.nextInt();
-                    while(op < 1 || op > 2){
-                        System.out.println("Valor inválido, digite 1 ou 2!");
-                        op = input.nextInt();
+                    System.out.println("Lembre-se: para se cadastrar, sua matricula já deve ter sido registrada por um professor ou admin!");
+                    System.out.println("Você é um professor ou um aluno?");
+                    System.out.println("1 - Professor");
+                    System.out.println("2 - Aluno");
+                    int opPA = input.nextInt();
+                    while(opPa < 1 || opPa > 2){
+                        System.out.println("Opção inválida, digite 1 ou 2.");
+                        opPA = input.nextInt();
                     }
+                    if(opPA == 1){
 
-                    System.out.println("Informe o nome do usuario:");
-                    String nome = inputString.nextLine();
-
-                    System.out.println("Informe a matricula do usuario:");
-                    String matricula = inputString.nextLine();
-
-                    System.out.println("Informe o dia do seu nascimento:");
-                    int dia = input.nextInt();
-                    System.out.println("Informe o mes do seu nascimento (numero):");
-                    int mes = input.nextInt();
-                    System.out.println("Informe seu ano de nascimento:");
-                    int ano = input.nextInt();
-                    Date dataNascimento = new Date(ano, mes - 1, dia);
-
-                    System.out.println("Informe o número do usuario:");
-                    String numero = inputString.nextLine();
-
-                    System.out.println("Informe o email do usuario:");
-                    String email = inputString.nextLine();
-
-                    if(op == 1){
-                        System.out.println("Informe o periodo do aluno:");
-                        int periodo = input.nextInt();
-                        System.out.println("O aluno está estagiando? (Digite S para sim e N para não):");
-                        char opEstagiando = input.next().charAt(0);
-                        boolean estagiando = Character.toUpperCase(opEstagiando) == 'S';
-
-                        Usuario user = new Aluno(nome, matricula, dataNascimento, numero, email, periodo, estagiando);
-                        listaUsuarios.add(user);
                     }else{
-                        Usuario user = new Professor(nome, matricula, dataNascimento, numero, email);
-                        listaUsuarios.add(user);
-                    }
 
-                    System.out.println("Registro realizado com sucesso!");
-                    break;
+                    }
                 case 0:
                     System.out.println("Bye bye!");
                     break;
