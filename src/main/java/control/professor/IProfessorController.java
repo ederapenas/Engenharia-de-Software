@@ -1,4 +1,4 @@
-package control;
+package control.professor;
 
 import model.Professor;
 import java.util.LinkedList;
@@ -7,9 +7,9 @@ public interface IProfessorController {
 
     public boolean cadastraProfessor();
 
-    public boolean atualizaProfessor();
+    public boolean atualizaProfessor(Professor professor);
 
-    public boolean deletaProfessor(String matricula);
+    public boolean deletaProfessor(Professor professor);
 
     public Professor getProfessor(String matricula);
 

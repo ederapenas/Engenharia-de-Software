@@ -1,4 +1,4 @@
-package control;
+package control.aluno;
 
 import model.Aluno;
 import java.util.LinkedList;

@@ -1,4 +1,4 @@
-package control;
+package control.contrato;
 
 import model.Contrato;
 import java.util.LinkedList;
@@ -7,9 +7,9 @@ public interface IContratoController {
 
     public boolean criaContrato();
 
-    public boolean atualizaContrato();
+    public boolean atualizaContrato(Contrato contrato);
 
-    public boolean deletaContrato(int idContrato);
+    public boolean deletaContrato(Contrato contrato);
 
     public Contrato getContrato(int idContrato);
 

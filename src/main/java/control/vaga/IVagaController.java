@@ -1,4 +1,4 @@
-package control;
+package control.vaga;
 
 import model.Vaga;
 import java.util.LinkedList;
@@ -7,9 +7,9 @@ public interface IVagaController {
 
     public boolean criaVaga();
 
-    public boolean atualizaVaga();
+    public boolean atualizaVaga(Vaga vaga);
 
-    public boolean deletaVaga(int idVaga);
+    public boolean deletaVaga(Vaga vaga);
 
     public Vaga getVaga(int idVaga);
 
