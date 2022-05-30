@@ -36,7 +36,7 @@ public class Main {
                     System.out.println("1 - Professor");
                     System.out.println("2 - Aluno");
                     int opPA = input.nextInt();
-                    while(opPa < 1 || opPa > 2){
+                    while(opPA < 1 || opPA > 2){
                         System.out.println("Opção inválida, digite 1 ou 2.");
                         opPA = input.nextInt();
                     }
