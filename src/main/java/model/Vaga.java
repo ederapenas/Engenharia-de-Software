@@ -1,16 +1,20 @@
 package model;
 
+import java.util.LinkedList;
+
 public class Vaga {
     private String info;
     private int idVaga;
     private double salario;
     private int cargaHoraria;
+    private LinkedList<Aluno> candidatos;
 
     public Vaga(String info, int idVaga, double salario, int cargaHoraria){
         this.info = info;
         this.idVaga = idVaga;
         this.salario = salario;
         this.cargaHoraria = cargaHoraria;
+        this.candidatos = new LinkedList<Aluno>();
     }
 
     public String getInfo() {
@@ -43,5 +47,13 @@ public class Vaga {
 
     public void setCargaHoraria(int cargaHoraria) {
         this.cargaHoraria = cargaHoraria;
+    }
+
+    public void adicionaCandidato(Aluno aluno){
+        this.candidatos.add(aluno);
+    }
+
+    public LinkedList<Aluno> getCandidatos(){
+        return this.candidatos;
     }
 }

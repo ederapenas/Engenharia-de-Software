@@ -114,8 +114,8 @@ public class Main {
             op = input.nextInt();
             if(usuarioAtual.getClass().equals(Aluno.class)){
 
-            }else{
-                
+            }else if(usuarioAtual.getClass().equals(Professor.class)){
+
             }
         }while(op != 0);
     }

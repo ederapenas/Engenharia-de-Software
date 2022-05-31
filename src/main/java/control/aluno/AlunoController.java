@@ -135,6 +135,7 @@ public class AlunoController implements IAlunoController {
         for(int i = 0; i < this.alunos.size(); i++){
             if(this.alunos.get(i).getMatricula().equalsIgnoreCase(matricula)){
                 aluno = this.alunos.get(i);
+                return aluno;
             }
         }
 

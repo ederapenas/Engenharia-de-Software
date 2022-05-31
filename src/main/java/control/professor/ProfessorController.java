@@ -113,6 +113,7 @@ public class ProfessorController implements IProfessorController {
         for(int i = 0; i < this.professores.size(); i++){
             if(this.professores.get(i).getMatricula().equalsIgnoreCase(matricula)){
                 professor = this.professores.get(i);
+                return professor;
             }
         }
 
