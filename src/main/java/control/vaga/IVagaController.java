@@ -14,4 +14,6 @@ public interface IVagaController {
     public Vaga getVaga(int idVaga);
 
     public LinkedList<Vaga> getTodasVagas();
+
+    public boolean existeVaga(int idVaga);
 }

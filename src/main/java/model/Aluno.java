@@ -33,7 +33,7 @@ public class Aluno extends Usuario{
         System.out.println("O que deseja fazer?");
         System.out.println("1 - Ver oportunidades de estágio");
         System.out.println("2 - Se candidatar a um estágio");
-        System.out.println("0 - Sair");
+        System.out.println("0 - Sair e fazer log out");
     }
 
     @Override

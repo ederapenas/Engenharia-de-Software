@@ -1,14 +1,13 @@
 package control.contrato;
 
-import model.Aluno;
+import model.Usuario;
 import model.Contrato;
-import model.Professor;
 import model.Vaga;
 import java.util.LinkedList;
 
 public interface IContratoController {
 
-    public boolean criaContrato(Aluno aluno, Professor professor, Vaga vaga);
+    public boolean criaContrato(Usuario aluno, Usuario professor, Vaga vaga);
 
     public boolean atualizaContrato(Contrato contrato);
 
@@ -17,4 +16,6 @@ public interface IContratoController {
     public Contrato getContrato(int idContrato);
 
     public LinkedList<Contrato> getTodosContratos();
+
+    public boolean existeContrato(int idContrato);
 }

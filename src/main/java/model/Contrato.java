@@ -1,24 +1,24 @@
 package model;
 
 public class Contrato {
-    private Aluno aluno;
+    private Usuario aluno;
     private Vaga vaga;
-    private Professor professor;
+    private Usuario professor;
 
     private int idContrato;
 
-    public Contrato(Aluno aluno, Vaga vaga, Professor professor, int idContrato){
+    public Contrato(Usuario aluno, Vaga vaga, Usuario professor, int idContrato){
         this.aluno = aluno;
         this.vaga = vaga;
         this.professor = professor;
         this.idContrato = idContrato;
     }
 
-    public Aluno getAluno() {
+    public Usuario getAluno() {
         return aluno;
     }
 
-    public Professor getProfessor() {
+    public Usuario getProfessor() {
         return professor;
     }
 
@@ -30,7 +30,7 @@ public class Contrato {
         return idContrato;
     }
 
-    public void setAluno(Aluno aluno) {
+    public void setAluno(Usuario aluno) {
         this.aluno = aluno;
     }
 
@@ -38,11 +38,17 @@ public class Contrato {
         this.vaga = vaga;
     }
 
-    public void setProfessor(Professor professor) {
+    public void setProfessor(Usuario professor) {
         this.professor = professor;
     }
 
     public void setIdContrato(int idContrato) {
         this.idContrato = idContrato;
+    }
+
+    @Override
+    public String toString() {
+        return "Nome do aluno: " + this.aluno.getNome() + "\n Nome do professor: " + this.professor.getNome() + "\n ID da vaga: "
+                + this.vaga.getIdVaga() + "\n ID do contrato: " + this.idContrato;
     }
 }

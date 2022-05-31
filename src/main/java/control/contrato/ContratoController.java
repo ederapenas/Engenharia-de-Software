@@ -1,10 +1,8 @@
 package control.contrato;
 
 import control.contrato.IContratoController;
-import model.Aluno;
-import model.Contrato;
-import model.Professor;
-import model.Vaga;
+import model.*;
+
 import java.util.Scanner;
 import java.util.LinkedList;
 
@@ -15,7 +13,7 @@ public class ContratoController implements IContratoController {
         contratos = new LinkedList<Contrato>();
     }
     @Override
-    public boolean criaContrato(Aluno aluno, Professor professor, Vaga vaga) {
+    public boolean criaContrato(Usuario aluno, Usuario professor, Vaga vaga) {
         Scanner input = new Scanner(System.in);
         System.out.println("Informe o id que quer designar para o contrato: ");
         int idContrato = input.nextInt();
