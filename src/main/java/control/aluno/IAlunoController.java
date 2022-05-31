@@ -14,4 +14,12 @@ public interface IAlunoController {
     public Aluno getAluno(String matricula);
 
     public LinkedList<Aluno> getTodosAlunos();
+
+    public LinkedList<Aluno> getAlunosPeriodo(int periodo);
+
+    public LinkedList<Aluno> getTodosAlunosEstagiando();
+
+    public LinkedList<Aluno> getTodosAlunosNaoEstagiando();
+
+    public boolean existeAluno(String matricula);
 }

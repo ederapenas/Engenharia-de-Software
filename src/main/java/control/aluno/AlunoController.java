@@ -1,8 +1,7 @@
 package control.aluno;
 
-import jdk.swing.interop.SwingInterOpUtils;
-import model.Aluno;
 
+import model.Aluno;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.Scanner;
@@ -44,7 +43,10 @@ public class AlunoController implements IAlunoController {
             return false;
         }
 
-        Aluno aluno = new Aluno(nome, matricula, dataDeNascimento, numero, email, periodo, estaEstagiando);
+        System.out.println("Por fim, informe sua senha: ");
+        String senha = inputString.nextLine();
+
+        Aluno aluno = new Aluno(nome, matricula, dataDeNascimento, numero, email, senha, periodo, estaEstagiando);
         return alunos.add(aluno);
     }
 
@@ -144,13 +146,50 @@ public class AlunoController implements IAlunoController {
         return this.alunos;
     }
 
-    public boolean existeAluno(String matricula){
+    public LinkedList<Aluno> getAlunosPeriodo(int periodo){
+        LinkedList<Aluno> alunosPeriodo = new LinkedList<Aluno>();
+
         for(int i = 0; i < this.alunos.size(); i++){
-            if(this.alunos.get(i).getMatricula().equalsIgnoreCase(matricula)){
-                return false;
+            if(this.alunos.get(i).getPeriodo() == periodo){
+                alunosPeriodo.add(this.alunos.get(i));
             }
         }
 
-        return true;
+        return alunosPeriodo;
     }
+
+    public LinkedList<Aluno> getTodosAlunosEstagiando(){
+        LinkedList<Aluno> alunosEstagiando = new LinkedList<Aluno>();
+
+        for(int i = 0; i < this.alunos.size(); i++){
+            if(this.alunos.get(i).isEstagiando()){
+                alunosEstagiando.add(this.alunos.get(i));
+            }
+        }
+
+        return alunosEstagiando;
+    }
+
+    public LinkedList<Aluno> getTodosAlunosNaoEstagiando(){
+        LinkedList<Aluno> alunosNaoEstagiando = new LinkedList<Aluno>();
+
+        for(int i = 0; i < this.alunos.size(); i++){
+            if(!(this.alunos.get(i).isEstagiando())){
+                alunosNaoEstagiando.add(this.alunos.get(i));
+            }
+        }
+
+        return alunosNaoEstagiando;
+    }
+
+    public boolean existeAluno(String matricula){
+        for(int i = 0; i < this.alunos.size(); i++){
+            if(this.alunos.get(i).getMatricula().equalsIgnoreCase(matricula)){
+                return true;
+            }
+        }
+
+        return false;
+    }
+
 }

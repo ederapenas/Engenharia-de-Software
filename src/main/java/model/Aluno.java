@@ -6,8 +6,8 @@ public class Aluno extends Usuario{
     private int periodo;
     private boolean estagiando;
 
-    public Aluno(String nome, String matricula, Date dataDeNascimento, String numero, String email, int periodo, boolean estagiando) {
-        super(nome, matricula, dataDeNascimento, numero, email);
+    public Aluno(String nome, String matricula, Date dataDeNascimento, String numero, String email, String senha, int periodo, boolean estagiando) {
+        super(nome, matricula, dataDeNascimento, numero, email, senha);
         this.periodo = periodo;
         this.estagiando = estagiando;
     }
@@ -34,5 +34,12 @@ public class Aluno extends Usuario{
         System.out.println("1 - Ver oportunidades de estágio");
         System.out.println("2 - Se candidatar a um estágio");
         System.out.println("0 - Sair");
+    }
+
+    @Override
+    public String toString() {
+        return "Nome: " + this.getNome() + "\n Matricula: " + this.getMatricula() + "\n Data de nascimento: "
+                + this.getDataDeNascimento() + "\n Numero: " + this.getNumero() + "\n E-mail: "
+                + this.getEmail() + "\n Periodo: " + this.periodo + "\n Está estagiando? " + this.estagiando;
     }
 }

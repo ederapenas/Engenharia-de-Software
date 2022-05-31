@@ -10,13 +10,13 @@ public abstract class Usuario {
     private String numero;
     private String email;
 
-    public Usuario(String nome, String matricula, Date dataDeNascimento, String numero, String email){
+    public Usuario(String nome, String matricula, Date dataDeNascimento, String numero, String email, String senha){
         this.nome = nome;
         this.matricula = matricula;
         this.dataDeNascimento = dataDeNascimento;
         this.numero = numero;
         this.email = email;
-        this.senha = null;
+        this.senha = senha;
     }
 
     public String getMatricula() {
@@ -59,6 +59,15 @@ public abstract class Usuario {
         this.numero = numero;
     }
 
+    public String getSenha() {
+        return this.senha;
+    }
+
+    public void setSenha(String senha){
+        this.senha = senha;
+    }
+
     public abstract void menu();
 
+    public abstract String toString();
 }

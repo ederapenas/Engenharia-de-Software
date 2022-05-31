@@ -14,4 +14,6 @@ public interface IProfessorController {
     public Professor getProfessor(String matricula);
 
     public LinkedList<Professor> getTodosProfessores();
+
+    public boolean existeProfessor(String matricula);
 }
