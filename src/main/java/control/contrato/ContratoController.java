@@ -1,8 +1,6 @@
 package control.contrato;
 
-import control.contrato.IContratoController;
 import model.*;
-
 import java.util.Scanner;
 import java.util.LinkedList;
 

@@ -1,7 +1,5 @@
 package control.professor;
 
-import control.professor.IProfessorController;
-import model.Aluno;
 import model.Professor;
 import java.util.Date;
 import java.util.LinkedList;

@@ -1,6 +1,5 @@
 package control.aluno;
 
-
 import model.Aluno;
 import java.util.Date;
 import java.util.LinkedList;
