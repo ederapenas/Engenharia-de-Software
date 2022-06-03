@@ -7,7 +7,6 @@ import control.professor.ProfessorController;
 import control.vaga.IVagaController;
 import control.vaga.VagaController;
 import model.*;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Scanner;
@@ -60,7 +59,7 @@ public class Main {
                         else{
                             if(professorController.getProfessor(matricula).getSenha().equals(senha)){
                                 usuarioAtual = professorController.getProfessor(matricula);
-                                segundoMenu(usuarioAtual);
+                                segundoMenu(usuarioAtual, vagaController, contratoController, alunoController);
                             }else{
                                 System.out.println("Senha inválida!");
                                 break;
@@ -74,7 +73,7 @@ public class Main {
                         else{
                             if(alunoController.getAluno(matricula).getSenha().equals(senha)){
                                 usuarioAtual = alunoController.getAluno(matricula);
-                                segundoMenu(usuarioAtual);
+                                segundoMenu(usuarioAtual, vagaController, contratoController, alunoController);
                             }
                             else{
                                 System.out.println("Senha inválida!");
@@ -113,10 +112,7 @@ public class Main {
         System.out.println("0 - Fechar o programa");
     }
 
-    public static void segundoMenu(Usuario usuarioAtual){
-        IVagaController vagaController = new VagaController();
-        IContratoController contratoController = new ContratoController();
-        IAlunoController alunoController = new AlunoController();
+    public static void segundoMenu(Usuario usuarioAtual, IVagaController vagaController, IContratoController contratoController, IAlunoController alunoController){
         Scanner input = new Scanner(System.in);
         Scanner inputString = new Scanner(System.in);
         int op;

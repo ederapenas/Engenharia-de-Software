@@ -22,8 +22,21 @@ public class ProfessorController implements IProfessorController {
         String nome = inputString.nextLine();
         System.out.println("Informe a matricula do professor: ");
         String matricula = inputString.nextLine();
-        System.out.println("Informe a data de nascimento do professor: ");
-        Date dataDeNascimento = new Date(inputString.nextLine());
+        System.out.println("Informe o dia de nascimento do professor: ");
+        int data = input.nextInt();
+        while(data < 1 || data > 31){
+            System.out.println("Dia invalido, informe um dia entre 1 e 31: ");
+            data = input.nextInt();
+        }
+        System.out.println("Informe o mes de nascimento do professor: ");
+        int mes = input.nextInt();
+        while(mes < 1 || mes > 12){
+            System.out.println("Mes invalido, informe um mes entre 1 e 12: ");
+            mes = input.nextInt();
+        }
+        System.out.println("Informe o ano de nascimento do professor: ");
+        int ano = input.nextInt();
+        Date dataDeNascimento = new Date(data, mes, ano);
         System.out.println("Informe o numero do professor: ");
         String numero = inputString.nextLine();
         System.out.println("Informe o email do professor: ");
@@ -75,8 +88,21 @@ public class ProfessorController implements IProfessorController {
                 System.out.println("Atualização de matricula feita com sucesso!");
                 return true;
             case 3:
-                System.out.println("Informe a nova data de nascimento do professor: ");
-                Date dataDeNascimento = new Date(inputString.nextLine());
+                System.out.println("Informe o dia de nascimento do professor: ");
+                int data = input.nextInt();
+                while(data < 1 || data > 31){
+                    System.out.println("Dia invalido, informe um dia entre 1 e 31: ");
+                    data = input.nextInt();
+                }
+                System.out.println("Informe o mes de nascimento do professor: ");
+                int mes = input.nextInt();
+                while(mes < 1 || mes > 12){
+                    System.out.println("Mes invalido, informe um mes entre 1 e 12");
+                    mes = input.nextInt();
+                }
+                System.out.println("Informe o ano de nascimento do professor: ");
+                int ano = input.nextInt();
+                Date dataDeNascimento = new Date(data, mes, ano);
                 professor.setDataDeNascimento(dataDeNascimento);
                 System.out.println("Atualização de data de nascimento feita com sucesso!");
                 return true;

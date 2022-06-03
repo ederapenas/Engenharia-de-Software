@@ -22,8 +22,21 @@ public class AlunoController implements IAlunoController {
         String nome = inputString.nextLine();
         System.out.println("Informe a matricula do aluno: ");
         String matricula = inputString.nextLine();
-        System.out.println("Informe a data de nascimento do aluno: ");
-        Date dataDeNascimento = new Date(inputString.nextLine());
+        System.out.println("Informe a dia de nascimento do aluno: ");
+        int data = input.nextInt();
+        while(data < 1 || data > 31){
+            System.out.println("Dia invalido, digite um dia entre 1 e 31:");
+            data = input.nextInt();
+        }
+        System.out.println("Informe o mes de nascimento do aluno: ");
+        int mes = input.nextInt();
+        while(mes < 1 || mes > 12){
+            System.out.println("Mes invalido, informe um mes entre 1 e 12: ");
+            mes = input.nextInt();
+        }
+        System.out.println("Informe o ano de nascimento do aluno: ");
+        int ano = input.nextInt();
+        Date dataDeNascimento = new Date(data, mes, ano);
         System.out.println("Informe o numero do aluno: ");
         String numero = inputString.nextLine();
         System.out.println("Informe o email do aluno: ");
@@ -87,8 +100,20 @@ public class AlunoController implements IAlunoController {
                 System.out.println("Atualização de matricula feita com sucesso!");
                 return true;
             case 3:
-                System.out.println("Informe a nova data de nascimento do aluno: ");
-                Date dataDeNascimento = new Date(inputString.nextLine());
+                System.out.println("Informe o dia de nascimento do aluno: ");
+                int data = input.nextInt();
+                while(data < 1 || data > 31){
+                    System.out.println("Data invalida, informe um numero entre 1 e 31 ");
+                    data = input.nextInt();
+                }
+                System.out.println("Informe o mes de nascimento do aluno: ");
+                int mes = input.nextInt();
+                while(data < 1 || data > 12){
+                    System.out.println("Mes invalido, digite um mes entre 1 e 12: ");
+                }
+                System.out.println("Informe o ano de nascimento do aluno: ");
+                int ano = input.nextInt();
+                Date dataDeNascimento = new Date(data, mes, ano);
                 aluno.setDataDeNascimento(dataDeNascimento);
                 System.out.println("Atualização de data de nascimento feita com sucesso!");
                 return true;
