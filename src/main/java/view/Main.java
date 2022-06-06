@@ -96,6 +96,7 @@ public class Main {
                     }else{
                         alunoController.cadastraAluno();
                     }
+                    break;
                 case 0:
                     System.out.println("Bye bye!");
                     break;
