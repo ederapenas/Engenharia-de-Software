@@ -17,8 +17,8 @@ public class ContratoTest {
 
         Contrato contrato = new Contrato(aluno, vaga, prof,1);
 
-        int verId = contrato.getIdContrato();
+        String nomeProfessor = contrato.getProfessor().getNome();
 
-        assertEquals(1, verId);
+        assertEquals("leuson", nomeProfessor);
     }
 }
