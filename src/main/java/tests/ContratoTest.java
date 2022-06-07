@@ -9,7 +9,7 @@ public class ContratoTest {
 
 
     @Test
-    public void verIdCOntrato(){
+    public void verNomeProfessorContrato(){
         Date data = new Date(20, 1, 10);
         Professor prof = new Professor("leuson", "20", data, "1","leuson@unicap","23");
         Aluno aluno = new Aluno("joao", "202", data, "2", "a@email", "23", 4, true);
